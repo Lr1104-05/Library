@@ -7,10 +7,18 @@
     color: rgb(219, 219, 219);
 }
 body{
+    animation: fadeIn .5s ease-in-out;
     background-image: url('Lray Portfolio.jpg');
     background-size: 2150px;
     margin-left: 40px;
-    transition: background-position 1s ease, background-size 1s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
 }
 
 nav {
@@ -40,9 +48,17 @@ nav {
     gap:50px;
     font-size: 20px;
     margin-left: 80px;
-    
 }
 
+.navbar li{
+    border-radius: 33px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+    transform-origin: center;
+}
+.navbar li:hover{
+    border-radius: 10px;
+    transform: scale(1.3);
+}
 .navbar a {
     text-decoration: none;
     font-weight: 900;
@@ -129,7 +145,7 @@ main{
 }
 
 .Lray_Perico {
-    width: 500px;
+    width: 600px;
     border-radius: 30px;
     margin-left: auto;
     box-shadow: 2px 2px 5px rgb(0, 0, 0.7);
@@ -176,11 +192,31 @@ main{
 .about-container{
     display: flex;
     gap: 100px;
-    justify-content: center;
+    justify-content: end;
+    align-items: center;
+    margin-right: 150px;
+    position: relative;
+    background-color: rgba(19, 18, 18, 0.6); 
+    z-index: 1; 
+    padding: 100px;
+    border-radius: 10px;
+}
+.about-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(51, 50, 50);
+    background-size: cover; 
+    background-position: center; 
+    opacity: 0.5; 
+    z-index: -1; 
+    border-radius: 10px; 
 }
 .about-container p{
     display: flex;
-    justify-content: center;
     text-align: justify;
     width: 800px;
     font-size: 30px;
@@ -198,13 +234,16 @@ main{
 }
 
 .about-container img{
-    height: 300px;
+    position: absolute;
+    height: 400px;
+    left: 9%;
 }
 .lray img{
     border: solid #1877F2;
     border-radius: 50%;
-    height: 250px;
+    height: 490px;
     box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    top: 20%;
 }
 .SandI-container{
     display: block;
@@ -213,18 +252,23 @@ main{
     display: flex;
     justify-content: center;
     text-align: justify;
-    width: 800px;
     font-size: 70px;
     text-decoration: underline;
     color: rgb(0, 119, 255);
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
-.SandI-container ul{
+
+
+.skills-list{
+    position: relative;
     display: flex;
     list-style-type: none;
     gap: 10%;
+    justify-content: center;
+    padding: 0;
 }
-.SandI-container li{
+.skill-item{
+    position: relative;
     border-radius: 30px;
     border: solid 2.5px;
     border-color: rgb(0, 119, 255);
@@ -233,11 +277,98 @@ main{
     height: 45px;
     text-align: center;
     padding: 10px;
+    transition: transform 0.2s ease-in-out, background-color 0.1s ease-in-out;
+    transform-origin: center;
+    cursor: pointer;
 }
-.SandI-container li:hover{
+.skill-item:hover{
     background-color: rgb(0, 119, 255);
-    transition: max-height 0.3s ease-in-out;
+    transform: scale(1.1);
 }
-.SandI-container:hover .hover-content {
+
+.hover-content{
+    width: 200px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out,     padding 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.skill-item:hover .hover-content{
+    height: 50in;
+    width: 500px;
     max-height: 150px; 
-    padding: 10px; 
+    padding: 10px;
+    background-color: rgb(0, 0, 0,0.8);
+}
+.form{
+    width: 90%;
+    max-width: 700px;
+}
+.contact-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+.input-group{
+    position: relative;
+    margin-bottom: 30px;
+}
+input, textarea{
+    width: 150%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgb(0, 119, 255);
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+}
+label{
+    font-weight: 800;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: ;
+    cursor: text;
+    transition: 1.2s;
+}
+button{
+    padding: 10px;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid rgb(0, 119, 255);
+    width: 150%;
+    cursor: pointer;
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    font-weight: 900;
+    top: -35px;
+    font-size: 14px;
+    color: rgb(87, 164, 252);
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row .input-group{
+    flex-basis: 38%;
+}
+
