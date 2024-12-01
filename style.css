@@ -1,0 +1,243 @@
+* {
+    padding: 1px;
+    margin: px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    color: rgb(219, 219, 219);
+}
+body{
+    background-image: url('Lray Portfolio.jpg');
+    background-size: 2150px;
+    margin-left: 40px;
+    transition: background-position 1s ease, background-size 1s ease;
+}
+
+nav {
+    
+    
+}
+
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 20px;
+    padding: 8px;
+}
+
+
+.navbar div {
+    flex: 1;
+    text-align: center;
+}
+
+
+.navbar ul {
+    display: flex;
+    justify-content: start;
+    list-style-type: none;
+    gap:50px;
+    font-size: 20px;
+    margin-left: 80px;
+    
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.Contact{
+    margin-left: 30%;
+}
+
+.line-2{
+    width: 150px;
+    height: 1px;
+    background-color: rgb(219, 219, 219);
+    margin: 14px;
+    margin-right: 50px;
+}
+
+.social{
+    display: flex;
+}
+
+.social ul{
+    padding-right: 10%;
+    margin-left: 20%;
+}
+
+.social a {
+    color: rgb(0, 119, 255); 
+    font-size: 30px; 
+    text-decoration: none;
+    margin: 20px;
+}
+
+.logo{
+    display: contents;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 119, 255);
+    width: 30px;
+}
+
+.logo h1 {
+    font-size: 20px;
+    background-color: rgb(0, 119, 255);
+    color: rgb(219, 219, 219);
+    padding: 6px;
+    width: 200px;
+}
+
+main{
+    margin: 0%;
+    padding: 0%;
+}
+
+.F-container{
+    display: flex;
+    height: 800px;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Fpage{
+    font-size: 100px;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    z-index: 1;
+    color: rgb(219, 219, 219);
+}
+
+.prgrph {
+    width: 40%;
+    position: absolute;
+    top: 900%;
+    color: rgb(219, 219, 219);
+    font-weight: 500;
+    text-align: justify;
+}
+
+.Lray_Perico {
+    width: 500px;
+    border-radius: 30px;
+    margin-left: auto;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0.7);
+    position: absolute;
+    top: 200%;
+    left: 20%;
+    right: 4%;
+  }
+
+  .fa-brands.fa-instagram{
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .fa-brands.fa-facebook{
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #1877F2, #3b5998);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-align: center;
+}   
+
+.line {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    top: 7.4in;
+    background-color: rgb(219, 219, 219); 
+    margin: 10px;
+    margin-right: 50px;
+}
+
+.about-container ul{
+    display: flex;
+    justify-content: start;
+}
+.about-container{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+.about-container p{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    width: 800px;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.about-container h1{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    width: 800px;
+    font-size: 70px;
+    text-decoration: underline;
+    color: rgb(0, 119, 255);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.about-container img{
+    height: 300px;
+}
+.lray img{
+    border: solid #1877F2;
+    border-radius: 50%;
+    height: 250px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.SandI-container{
+    display: block;
+}
+.SandI-container h1{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    width: 800px;
+    font-size: 70px;
+    text-decoration: underline;
+    color: rgb(0, 119, 255);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.SandI-container ul{
+    display: flex;
+    list-style-type: none;
+    gap: 10%;
+}
+.SandI-container li{
+    border-radius: 30px;
+    border: solid 2.5px;
+    border-color: rgb(0, 119, 255);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    width: 200px;
+    height: 45px;
+    text-align: center;
+    padding: 10px;
+}
+.SandI-container li:hover{
+    background-color: rgb(0, 119, 255);
+    transition: max-height 0.3s ease-in-out;
+}
+.SandI-container:hover .hover-content {
+    max-height: 150px; 
+    padding: 10px; 
